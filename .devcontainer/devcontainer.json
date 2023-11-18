@@ -23,10 +23,11 @@
 				"Gruntfuggly.todo-tree"
 			]
 		}
-	}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	// "forwardPorts": [8881],
+	"appPort": [8881]
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
