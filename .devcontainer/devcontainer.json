@@ -2,8 +2,20 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
 	"name": "Java",
+	
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:11",
+	//"image": "mcr.microsoft.com/devcontainers/java:11",
+	
+	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
+	"dockerComposeFile": "docker-compose.yml",
+
+	// The 'service' property is the name of the service for the container that VS Code should
+	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+	"service": "app",
+
+	// The 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. Corresponds to a volume mount in .devcontainer/docker-compose.yml
+	"workspaceFolder": "/workspace",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
@@ -12,6 +24,7 @@
 			"installGradle": "true"
 		}
 	},
+
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -23,11 +36,11 @@
 				"Gruntfuggly.todo-tree"
 			]
 		}
-	},
+	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [8881],
-	"appPort": [8881]
+	// "appPort": [8881]
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
